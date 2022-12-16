@@ -6,6 +6,9 @@
 # SPDX-License-Identifier: Apache-2.0 license
 #
 
+# Set necessary var
+CURRENT_DIR=$(pwd)
+
 # Sort UART
 UART_SORT=$(sed -i 's/\([^:]\)\s/\1\n/g' uart.txt)
 
@@ -28,10 +31,17 @@ AIRQUALITY=$(echo $UART_LAST | awk '{print $7}')
 AIRQUALITY_DATA=$(echo $UART_LAST | awk '{print $8}')
 
 # Suggested Plant
-PLANT_DATA="oak tree"
+PLANT_DATA="Rose"
 
-# Plant Disease
-DISEASE_DATA="AIDS"
+# Plant Disease.
+# It is under work.
+# Might through wrong stuff.
+MODEL_PATH="/home/saalim/pr/mod"
+cd $MODEL_PATH
+python3 test.py | tee model.txt
+MODEL_LOG=$(tail -n 2 $MODEL_PATH/model.txt)
+DISEASE_DATA=$(echo $MODEL_LOG | awk '{print $3,$4}')
+cd $CURRENT_DIR
 
 # Generate json
 genJSON() {
@@ -51,5 +61,5 @@ genJSON() {
     exit 0
 }
 
-#genJSON
+genJSON
 bash deploy.sh
