@@ -6,8 +6,13 @@
 # SPDX-License-Identifier: Apache-2.0 license
 #
 
+# Sort UART
+UART_SORT=$(sed -i 's/\([^:]\)\s/\1\n/g' uart2.txt)
+
 # Take UART info
-UART_LAST=$( tail -n 1 uart.txt)
+UART_LAST=$( tail -n 4 uart2.txt)
+
+echo $UART_LAST
 
 # Take sensor data
 HUMIDITY=$(echo $UART_LAST | awk '{print $1}')
@@ -46,4 +51,5 @@ genJSON() {
     exit 0
 }
 
-genJSON
+#genJSON
+bash deploy.sh

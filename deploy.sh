@@ -16,3 +16,4 @@ git remote add origin https://github.com/NoName-Stuff/script
 git fetch origin
 git add json/
 git commit -m "$COMMIT"
+git push
