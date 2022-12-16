@@ -12,7 +12,7 @@ COMMIT_MSG="CI: Sync at"
 COMMIT="$COMMIT_MSG $DATE"
 
 # Deploy
-git remote add origin
+git remote add origin https://github.com/NoName-Stuff/script
 git fetch origin
 git add json/
 git commit -m "$COMMIT"
