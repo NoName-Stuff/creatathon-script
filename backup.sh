@@ -5,3 +5,14 @@
 #
 # SPDX-License-Identifier: Apache-2.0 license
 #
+
+# Set variable
+DATE=$(date)
+COMMIT_MSG="CI: Sync at"
+COMMIT="$COMMIT_MSG $DATE"
+
+# Deploy
+git remote add origin
+git fetch origin
+git add json/
+git commit -m "$COMMIT"
