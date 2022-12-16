@@ -7,10 +7,10 @@
 #
 
 # Sort UART
-UART_SORT=$(sed -i 's/\([^:]\)\s/\1\n/g' uart2.txt)
+UART_SORT=$(sed -i 's/\([^:]\)\s/\1\n/g' uart.txt)
 
 # Take UART info
-UART_LAST=$( tail -n 4 uart2.txt)
+UART_LAST=$( tail -n 4 uart.txt)
 
 echo $UART_LAST
 
