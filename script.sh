@@ -13,9 +13,6 @@ UART_LAST=$( tail -n 1 uart.txt)
 HUMIDITY=$(echo $UART_LAST | awk '{print $1}')
 HUMIDITY_DATA=$(echo $UART_LAST | awk '{print $2}')
 
-echo $HUMIDITY
-echo $HUMIDITY_DATA
-
 TEMPERATURE=$(echo $UART_LAST | awk '{print $3}')
 TEMPERATURE_DATA=$(echo $UART_LAST | awk '{print $4}')
 
@@ -24,15 +21,6 @@ SOILMOSTURE_DATA=$(echo $UART_LAST | awk '{print $6}')
 
 AIRQUALITY=$(echo $UART_LAST | awk '{print $7}')
 AIRQUALITY_DATA=$(echo $UART_LAST | awk '{print $8}')
-
-echo $TEMPERATURE
-echo $TEMPERATURE_DATA
-
-echo $SOILMOISTURE
-echo $SOILMOISTURE_DATA
-
-echo $AIRQUALITY
-echo $AIRQUALITY_DATA
 
 # Suggested Plant
 PLANT_DATA="oak tree"
