@@ -1,8 +1,8 @@
 {
-  "humidity": "18.00%",
-  "temperature": "33.00°C",
+  "humidity": "55.00%",
+  "temperature": "23.70°C",
   "soilmoisture": "",
-  "airquality": "381PPM",
+  "airquality": "0PPM",
   "plant": "oak tree",
   "disease": "AIDS"
 }
