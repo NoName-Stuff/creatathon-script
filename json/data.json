@@ -1,8 +1,8 @@
 {
-  "humidity": "0Humidity:",
-  "temperature": "Temperature:",
+  "humidity": "52.00%",
+  "temperature": "24.40°C",
   "soilmoisture": "",
-  "airquality": "AirQuality:",
-  "plant": "suggestedPlant:",
+  "airquality": "370PPM",
+  "plant": "Apple",
   "disease": " "
 }
