@@ -1,8 +1,8 @@
 {
-  "humidity": "",
-  "temperature": "",
+  "humidity": "0Humidity:",
+  "temperature": "Temperature:",
   "soilmoisture": "",
-  "airquality": "",
-  "plant": "",
+  "airquality": "AirQuality:",
+  "plant": "suggestedPlant:",
   "disease": " "
 }
