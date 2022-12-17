@@ -1,8 +1,8 @@
 {
   "humidity": "49.00%",
-  "temperature": "27.10°C",
+  "temperature": "27.00°C",
   "soilmoisture": "",
-  "airquality": "401PPM",
+  "airquality": "378PPM",
   "plant": "Rose",
   "disease": "Botrytis cinerea"
 }
