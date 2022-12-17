@@ -36,7 +36,7 @@ PLANT_DATA="Rose"
 # Plant Disease.
 # It is under work.
 # Might through wrong stuff.
-MODEL_PATH="/home/saalim/pr/mod"
+MODEL_PATH="/home/faizan/ai"
 cd $MODEL_PATH
 python3 test.py | tee model.txt
 MODEL_LOG=$(tail -n 2 $MODEL_PATH/model.txt)
@@ -58,7 +58,6 @@ genJSON() {
         rm json/data.json
     fi
     echo "$GEN_JSON_BODY" >> json/data.json
-    exit 0
 }
 
 genJSON
