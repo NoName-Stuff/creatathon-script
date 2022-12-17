@@ -11,15 +11,15 @@ CURRENT_DIR=$(pwd)
 
 # Update uart file
 if [[ -f uart.txt ]]; then
-    rm uart.txt
-    cp '/mnt/c/Users/Faizan Tabassum/Desktop/uart.txt' ./uart.txt
+   rm uart.txt
+   cp '/mnt/c/Users/Faizan Tabassum/Desktop/uart.txt' ./uart.txt
 fi
 
 # Sort UART
 UART_SORT=$(sed -i 's/\([^:]\)\s/\1\n/g' uart.txt)
 
 # Take UART info
-UART_LAST=$( tail -n 4 uart.txt)
+UART_LAST=$( tail -n 5 uart.txt)
 
 echo $UART_LAST
 
@@ -36,8 +36,22 @@ SOILMOSTURE_DATA=$(echo $UART_LAST | awk '{print $6}')
 AIRQUALITY=$(echo $UART_LAST | awk '{print $7}')
 AIRQUALITY_DATA=$(echo $UART_LAST | awk '{print $8}')
 
-# Suggested Plant
-PLANT_DATA="Rose"
+PLANT=$(echo $UART_LAST | awk '{print $9}')
+
+# Suggested Plant id
+PLANT_DATA=$(echo $UART_LAST | awk '{print $10}')
+
+if [ "$PLANT_DATA" = "0" ]; then
+    PLANT_DATA="Rose"
+elif [ "$PLANT_DATA" = "1" ]; then
+    PLANT_DATA="Rose"
+elif [ "$PLANT_DATA" = "2" ]; then
+    PLANT_DATA="Tea"
+elif [ "$PLANT_DATA" = "3" ]; then
+    PLANT_DATA="Orange"
+elif [ "$PLANT_DATA" = "4" ]; then
+    PLANT_DATA="Apple"
+fi
 
 # Plant Disease.
 # It is under work.
