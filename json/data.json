@@ -1,8 +1,8 @@
 {
-  "humidity": "",
-  "temperature": "",
+  "humidity": "24.40°C",
+  "temperature": "122.00%",
   "soilmoisture": "",
-  "airquality": "",
+  "airquality": "4",
   "plant": "Rose",
   "disease": " "
 }
