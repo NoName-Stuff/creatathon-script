@@ -18,6 +18,8 @@ fi
 # Sort UART
 UART_SORT=$(sed -i 's/\([^:]\)\s/\1\n/g' uart.txt)
 
+UART_SORT=$(sed -i 's/\(.*\)Humidity/\1\nHumidity/g' uart.txt)
+
 # Take UART info
 UART_LAST=$( tail -n 5 uart.txt)
 
