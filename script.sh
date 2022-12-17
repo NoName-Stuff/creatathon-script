@@ -9,6 +9,12 @@
 # Set necessary var
 CURRENT_DIR=$(pwd)
 
+# Update uart file
+if [[ -f uart.txt ]]; then
+    rm uart.txt
+    cp '/mnt/c/Users/Faizan Tabassum/Desktop/uart.txt' ./uart.txt
+fi
+
 # Sort UART
 UART_SORT=$(sed -i 's/\([^:]\)\s/\1\n/g' uart.txt)
 
